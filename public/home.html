@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+
+	<h1>Recipedia</h1>
+
+		<a ng-href="#submit"><span class="glyphicon glyphicon-plus"></span> Submit Recipe</a><hr>
+
+		<p ng-repeat="recipe in recipedia | orderBy: '-upvotes'">
+			<button type="button" class="btn btn-default" ng-click="incrementUpvotes(recipe._id)">
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</button> 
+			{{recipe.upvotes}}
+			<ng-click="showRecipe()">{{recipe.name}}</a>
+		</p>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<title>Recipedia: Submit</title>
+	</head>
+
+	<body>
+		<div class="container" ng-controller="AppCtrl">
+
+			<nav class="navbar navar-default">
+			  	<div class="container-fluid">
+			    	<div class="navbar-header">
+			      		<a class="navbar-brand" href="#">Recipedia</a>
+			    	</div>
+				    <ul class="nav navbar-nav">
+				      	<li><a href="index.html">Home</a></li>
+				      	<li><a href="#">Categories</a></li>
+				    	<li><a href="#">Page 2</a></li> 
+				    </ul>
+				    <ul class="nav navbar-nav navbar-right">
+				      	<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				      	<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				    </ul>
+			  	</div>
+			</nav>
+			
+			
+			<a ng-show="recipe.name" href="{{recipe.name}}">{{recipe.name}}</a>
+			<span ng-hide="recipe.name">
+					{{recipe.name}}
+			</span>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="controllers/controller.js"></script>
+	</body>
+</html>

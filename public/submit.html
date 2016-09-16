@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<body>
+		<div class="container" ng-controller="SubmitController">
+			
+			<h1>Submit a New Recipe</h1><br>
+			
+			<div class="form-group row">
+				<div class="col-md-8">
+					<input class="form-control" ng-model="recipe.name" type="text" placeholder="Recipe Name">
+				</div>
+			</div>
+
+			<div class="form-group row">
+
+				<div class="col-md-2">
+					
+					<input class="form-control" ng-model="recipe.ingredient" type="text" placeholder="ingredient">
+				</div>
+
+				<div class="col-md-1">
+
+					<input class="form-control" ng-model="recipe.quantity" type="number" placeholder="qty">
+				</div>
+
+				<div class="col-md-2">
+					
+					<input class="form-control" ng-model="recipe.measurement" type="text" placeholder="measurement (opt)">
+				</div>
+
+				<div class="col-md-1">
+
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-plus"></span>
+				</button>
+				</div>
+
+				<div class="col-md-6">
+					<label for="recipe">Directions:</label>
+					<textarea class="form-control" ng-model="recipe.directions" rows="20" id="recipeDirections">
+					</textarea><br>
+
+					<button type="button" class="btn btn-default pull-right" ng-click="submitRecipe()">Submit</button>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
